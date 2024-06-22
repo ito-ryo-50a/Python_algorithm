@@ -21,7 +21,7 @@ if __name__ == "__main__":
 # ACしたコード(必須)
 a, b = input().split()
 if a=="AtCoder" and b=="Land":
-  print("Yes")
+    print("Yes")
 else:
-  print("No")
+    print("No")
 

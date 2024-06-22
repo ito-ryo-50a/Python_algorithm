@@ -24,7 +24,7 @@ H = [int(a) for a in input().split()]
 c = 0
 s = 0
 while s <= M and c < N:
-  s += H[c]
-  if s <= M:
-    c += 1
+    s += H[c]
+    if s <= M:
+        c += 1
 print(c)
