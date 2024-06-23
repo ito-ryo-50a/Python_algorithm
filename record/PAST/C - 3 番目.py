@@ -6,10 +6,12 @@
 
 
 # 解法のポイント
-
+a = list(map(int, input().split()))
+a.sort(reverse=True)
+print(a[2])
 
 
 # ACしたコード
-A = list(map(int, input().split()))
-A.sort()
-print(A[3])
+a = list(map(int, input().split()))
+a.sort()
+print(a[3])
