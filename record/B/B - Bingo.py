@@ -1,7 +1,39 @@
-#
+# https://atcoder.jp/contests/abc157/tasks/abc157_b
 
 
 # リファクタリングしたコード(必須)
+A = [list(map(int, input().split())) for _ in range(3)]
+
+M = [[False] * 3 for _ in range(3)]
+
+N = int(input())
+
+for _ in range(N):
+    b = int(input())
+
+    for i in range(3):
+        for j in range(3):
+            if A[i][j] == b:
+                M[i][j] = True
+
+def check_bingo(M):
+    for i in range(3):
+        if all(M[i]):
+            return True
+
+    for i in range(3):
+        if all(M[j][i] for j in range(3)):
+            return True
+
+    if all(M[i][i] for i in range(3)) or all(M[i][2 - i] for i in range(3)):
+        return True
+
+    return False
+
+if check_bingo(M):
+    print("Yes")
+else:
+    print("No")
 
 
 
